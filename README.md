@@ -30,6 +30,13 @@ Promover **igualdade no acesso à educação**, oferecendo uma ferramenta gratui
 
 ---
 
+## 🔒 Login
+
+Email: usuario@exemplo.com
+Senha: senha123
+
+---
+
 ## 👩‍💻 Equipe  
 
 - Emanuelly, Adrian, Chistopher, Daniel e Gustavo Aparecido
