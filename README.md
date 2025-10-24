@@ -32,7 +32,7 @@ Promover **igualdade no acesso à educação**, oferecendo uma ferramenta gratui
 
 ## 🔒 Login
 
-Email: usuario@exemplo.com
+Email: usuario@exemplo.com  
 Senha: senha123
 
 ---
