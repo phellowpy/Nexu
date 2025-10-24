@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Conteúdo Principal</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li class="active-in-page"><a href="dashboard.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li><a href="assistencia.html">Assistência Online</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-destaque">
+            <div class="banner-conteudo">
+                <div class="slide-item active">
+                    <div class="info-saeb" style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
+                        <h2>Prova SAEB saindo do forno nos dias 20 a 31 de outubro de 2025!</h2>
+                        <a href="simulados.html" class="btn-estudo">Material de estudo foco Saeb</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recursos-grid">
+            <a href="simulados.html" class="card card-provas"><span>Banco de provas e simulados</span></a>
+            <a href="materiais.html" class="card card-materiais"><span>Materiais</span></a>
+            <a href="aulas-extras.html" class="card card-aulas"><span>Aulas Extras</span></a>
+            <a href="nivelamento.html" class="card card-nivelamento"><span>Nivelamento</span></a>
+        </section>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>

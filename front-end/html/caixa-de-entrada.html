@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Entrada</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li>
+                <li><a href="assistencia.html">Assistência Online</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html" class="active-icon"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a>
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../landing.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card inbox-container">
+            <div class="inbox-search-bar">
+                <p>Caixa de Entrada</p>
+                <div class="search-box filter-bar-light" style="padding: 5px 15px; border-radius: 30px;">
+                    <input type="text" placeholder="Buscar mensagens" style="border: none;">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="inbox-layout">
+                <div class="inbox-sidebar">
+                    <a href="#" class="sidebar-item active">Novos (2)</a>
+                    <a href="#" class="sidebar-item">Com Estrela <i class="fas fa-star"></i></a>
+                </div>
+
+                <div class="inbox-list">
+                    <a href="#" class="inbox-message new-message">
+                        <div class="message-controls"><i class="far fa-star"></i></div>
+                        <div class="message-content">
+                            <span class="sender">Equipe Nexu</span>
+                            <span class="subject">Sua conta foi ativada com sucesso!</span>
+                        </div>
+                        <span class="timestamp">19:20</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>

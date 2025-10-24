@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li><a href="assistencia.html">Assistência Online</a></li> 
+                <li class="active-in-page"><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card">
+            <h2>Conteúdos Salvos para Revisão Rápida</h2>
+            <p style="margin-bottom: 25px;">Aqui você encontra todos os materiais, simulados ou aulas que marcou como favoritos.</p>
+            
+            <div class="list-container-wrapper">
+                 <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Título</th>
+                                <th>Matéria</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-file-pdf" style="color: var(--color-button-primary);"></i> Material</td>
+                                <td>Resumo: Regência Verbal e Nominal</td>
+                                <td>Português</td>
+                                <td><button class="btn-show-more">Acessar</button></td>
+                            </tr>
+                             <tr>
+                                <td><i class="fas fa-chart-line" style="color: var(--color-highlight);"></i> Simulado</td>
+                                <td>Simulado de D32 (Probabilidade)</td>
+                                <td>Matemática</td>
+                                <td><button class="btn-show-more">Acessar</button></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-video" style="color: var(--color-highlight);"></i> Aula</td>
+                                <td>Vídeo: Ciclo do Carbono</td>
+                                <td>Ciências</td>
+                                <td><button class="btn-show-more">Acessar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 40px; color: var(--color-text-secondary); text-align: center;">Marque a estrela em qualquer conteúdo para adicioná-lo aqui!</h3>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="auth-body">
+    <div class="auth-form-card">
+        <h2>LOGIN DE ACESSO</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="E-mail" required>
+            <input type="password" id="login-password" placeholder="Senha" required>
+            
+            <p id="login-error-message" style="color: var(--color-button-primary); margin-bottom: 15px; display: none; font-weight: bold;"></p>
+            
+            <button type="submit" class="btn-auth">ENTRAR</button>
+        </form>
+        
+        <p style="margin-top: 20px;">Não tem uma conta? <a href="cadastro.html" style="color: var(--color-highlight);">Cadastre-se</a></p>
+        <p><a href="../../index.html" style="color: var(--color-text-secondary); font-size: 14px;">Voltar para o Início</a></p>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

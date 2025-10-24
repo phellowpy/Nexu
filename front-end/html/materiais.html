@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais de Estudo</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li class="active-in-page"><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li><a href="assistencia.html">Assistência Online</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card">
+            <h2>Biblioteca de Materiais Focados no SAEB</h2>
+            <p style="margin-bottom: 25px;">Selecione a matéria para visualizar os conteúdos, resumos e listas de exercícios disponíveis.</p>
+
+            <div class="materia-buttons-grid">
+                <a href="#" class="materia-btn">
+                    <i class="fas fa-calculator"></i>
+                    <span>Matemática</span>
+                </a>
+                <a href="#" class="materia-btn">
+                    <i class="fas fa-book-open"></i>
+                    <span>Português</span>
+                </a>
+                <a href="#" class="materia-btn">
+                    <i class="fas fa-vial"></i>
+                    <span>Ciências da Natureza</span>
+                </a>
+                <a href="#" class="materia-btn">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Ciências Humanas</span>
+                </a>
+            </div>
+
+            <h3 style="margin-top: 40px; border-bottom: 1px solid var(--color-text-secondary); padding-bottom: 10px;">Destaques em Conteúdo</h3>
+            
+            <div class="list-container-wrapper">
+                 <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Conteúdo</th>
+                                <th>Matéria</th>
+                                <th>Data de Atualização</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Revisão de D12: Cálculo de Área</td>
+                                <td>Matemática</td>
+                                <td>20/09/2025</td>
+                                <td><button class="btn-show-more">Acessar</button></td>
+                            </tr>
+                             <tr>
+                                <td>Interpretação de Gêneros Textuais (D1)</td>
+                                <td>Português</td>
+                                <td>15/09/2025</td>
+                                <td><button class="btn-show-more">Acessar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

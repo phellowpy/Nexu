@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulados e Provas Anteriores</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li class="active-in-page"><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li><a href="assistencia.html">Assistência Online</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card">
+            <h2>Simulados Focados e Provas Anteriores</h2>
+            <p style="margin-bottom: 25px;">Teste seus conhecimentos com simulados que replicam o formato e o nível de dificuldade da prova SAEB.</p>
+            
+            <div class="list-container-wrapper">
+                 <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome do Simulado</th>
+                                <th>Duração</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Simulado SAEB Completo (2025)</td>
+                                <td>3h 30min</td>
+                                <td style="color: var(--color-highlight);">Disponível</td>
+                                <td><button class="btn-estudo" style="padding: 5px 10px;">Iniciar</button></td>
+                            </tr>
+                             <tr>
+                                <td>Simulado de Nivelamento (Português)</td>
+                                <td>1h 00min</td>
+                                <td>Realizado (Nota: 78%)</td>
+                                <td><button class="btn-show-more">Ver Resultado</button></td>
+                            </tr>
+                             <tr>
+                                <td>Prova Oficial SAEB 2023 (Mat. e Port.)</td>
+                                <td>3h 30min</td>
+                                <td style="color: var(--color-highlight);">Disponível</td>
+                                <td><button class="btn-estudo" style="padding: 5px 10px;">Iniciar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; border-bottom: 1px solid var(--color-text-secondary); padding-bottom: 10px;">Seu Histórico de Desempenho</h3>
+            <p style="margin-top: 15px; color: var(--color-text-secondary);">Visualize gráficos e relatórios detalhados na seção Perfil.</p>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

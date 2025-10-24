@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li> 
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li>
+                <li><a href="assistencia.html">Assistência Online</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html" class="active-icon"><i class="fas fa-user-circle"></i></a>
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card profile-container">
+            <div class="profile-info-section">
+                <div class="profile-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-details">
+                    <h3>USUÁRIO145</h3>
+                    <p>usuario145@gmail.com</p>
+                    <p>Membro desde: 10/2025</p>
+                    <p style="margin-top: 10px;"><a href="#" style="color: var(--color-button-primary); text-decoration: none;">Editar Perfil</a></p>
+                </div>
+            </div>
+
+            <div class="profile-content-section">
+                <div class="profile-list-group">
+                    <h4>Materiais Acessados Recentemente</h4>
+                    <div class="list-item">
+                        <div>
+                            <p><strong>Exercícios de Bhaskara</strong></p>
+                            <small>Tipo: Lista de Exercícios | Matéria: Matemática</small>
+                        </div>
+                        <button class="btn-show-more">MOSTRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>

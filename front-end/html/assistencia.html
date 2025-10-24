@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistência Online</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li class="active-in-page"><a href="assistencia.html">Assistência Online</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card">
+            <h2>Tire Suas Dúvidas Imediatamente</h2>
+            <p style="margin-bottom: 25px;">Envie sua dúvida para um professor em tempo real ou agende um atendimento individual.</p>
+            
+            <div style="text-align: center; padding: 20px; border: 2px dashed var(--color-highlight); border-radius: 10px; margin-bottom: 30px;">
+                <i class="fas fa-headset" style="font-size: 40px; color: var(--color-highlight); margin-bottom: 10px;"></i>
+                <h3 style="margin-bottom: 15px;">Dúvida Rápida (Atendimento Imediato)</h3>
+                <p style="color: var(--color-text-secondary); margin-bottom: 20px;">Use o chat para tirar dúvidas pontuais sobre questões ou conceitos.</p>
+                <button class="btn-estudo" style="padding: 10px 30px;">Abrir Chat com Professor</button>
+            </div>
+
+            <h3 style="margin-top: 40px; border-bottom: 1px solid var(--color-text-secondary); padding-bottom: 10px;">Histórico de Atendimentos</h3>
+            
+            <div class="list-container-wrapper">
+                 <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Assunto</th>
+                                <th>Professor</th>
+                                <th>Status</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dúvida sobre Função Quadrática</td>
+                                <td>Prof. Júlio</td>
+                                <td>Resolvido</td>
+                                <td>21/10/2025</td>
+                            </tr>
+                             <tr>
+                                <td>Revisão de Concordância Verbal</td>
+                                <td>Profª. Lúcia</td>
+                                <td style="color: var(--color-button-primary);">Em Aberto</td>
+                                <td>22/10/2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/*
+    ESTILOS ESPECÍFICOS E CORREÇÕES PARA O DASHBOARD
+*/
+
+/* --- CORREÇÃO DE COR DO TEXTO NO BANNER DE DESTAQUE --- */
+/* Garante que o H2 no banner de destaque (Prova SAEB...) seja BRANCO em AMBOS os temas. */
+.banner-destaque .info-saeb h2 {
+    color: #ffffff !important; 
+}
+
+/* Garante que o link de estudo no banner use a cor clara. */
+.banner-destaque .btn-estudo {
+    color: var(--color-text-light) !important; 
+}
+
+
+/* --- GRID DE RECURSOS (CARDS DA DASHBOARD) --- */
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do link/card */
+.recursos-grid .card {
+    background-color: var(--color-bg-primary-dark); 
+    height: 150px; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+/* A CORREÇÃO FINAL: Força o texto (span) a ser BRANCO absoluto (#ffffff) dentro do card */
+.recursos-grid .card,
+.recursos-grid .card span,
+.recursos-grid .card i,
+.recursos-grid .card h2 {
+    /* Força o branco absoluto (#ffffff) em qualquer tema */
+    color: #ffffff !important; 
+}
+
+/* Garante que o texto dentro do card no Dark Mode também use branco absoluto */
+body.dark-mode .recursos-grid .card,
+body.dark-mode .recursos-grid .card span,
+body.dark-mode .recursos-grid .card i,
+body.dark-mode .recursos-grid .card h2 {
+    color: #ffffff !important; 
+}
+
+
+/* Regra de hover (mantida) */
+.recursos-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Estilo do texto dentro do card */
+.recursos-grid .card span {
+    display: block;
+    padding: 0 15px;
+    font-size: 1.1em;
+}

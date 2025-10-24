@@ -1,0 +1,593 @@
+/* Configurações básicas e reset */
+:root {
+    /* Cores do TEMA CLARO (Padrão) */
+    --color-bg-page: #f0f4f7;
+    --color-bg-navbar: #d1f4ed;
+    --color-bg-card: #ffffff;
+    --color-bg-card-darker: #f7f7f7;
+    --color-bg-primary-dark: #37475A;
+    --color-bg-table-row: #55687a;
+    
+    --color-text-primary: #37475A; /* Cor de texto principal ESCURA (preto/azul escuro) */
+    --color-text-secondary: #666666;
+    --color-text-light: #f4f4f4;
+    --color-highlight: #57A4A2;
+    --color-button-primary: #ff6f61;
+    --color-auth-bg: #b0e0d6;
+}
+
+/* DARK MODE VARIABLES */
+body.dark-mode {
+    --color-bg-page: #1e1e1e;
+    --color-bg-navbar: #333333;
+    --color-bg-card: #282828;
+    --color-bg-card-darker: #333333;
+    --color-bg-primary-dark: #3a3a3a;
+    --color-bg-table-row: #4a4a4a; 
+
+    --color-text-primary: #f4f4f4; /* Cor de texto principal CLARA (branco/off-white) */
+    --color-text-secondary: #b0c0cf;
+    --color-text-light: #1e1e1e; 
+    --color-highlight: #4cb6ac; 
+    --color-button-primary: #ff8c7a;
+    --color-auth-bg: #282828; 
+}
+
+
+/* --- APLICAÇÃO GERAL DAS VARIÁVEIS --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary); /* Aplica a cor do texto base */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Garante que links (a) sem classe específica usem a cor primária ou secundária */
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--color-highlight);
+}
+
+/* Garante que o texto de todos os links na navbar fique visível */
+.navbar a {
+    color: var(--color-text-primary);
+}
+
+/* Garante que os ícones (que são links ou botões) fiquem visíveis */
+.nav-icons i, .theme-toggle-btn {
+    color: var(--color-text-primary);
+}
+
+
+/* --- INPUTS E SELECTS DE FILTRO (Materiais, Simulados, Favoritos) --- */
+.filter-bar input, 
+.filter-bar select, 
+.filter-bar .search-button, 
+.inbox-search-bar input {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card-darker);
+    border: 1px solid var(--color-text-secondary); 
+}
+body.dark-mode .filter-bar input::placeholder,
+body.dark-mode .inbox-search-bar input::placeholder {
+    color: var(--color-text-secondary);
+}
+body.dark-mode .filter-bar .search-button {
+    background-color: var(--color-bg-primary-dark);
+}
+body.dark-mode .filter-bar .search-button i {
+    color: var(--color-text-primary);
+}
+
+
+/* --- NAVBAR DE CONTEÚDO (LOGADO) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--color-bg-navbar); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--color-highlight);
+    color: var(--color-text-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+    padding-bottom: 5px; 
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li.active-in-page {
+    border-bottom: 3px solid var(--color-highlight);
+    font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons i {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    transition: color 0.3s;
+}
+
+.nav-icons a.active-icon i {
+    color: var(--color-highlight);
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 15px;
+    color: var(--color-text-primary);
+}
+
+
+/* --- LAYOUT DE PÁGINAS GERAIS --- */
+.content-page {
+    padding: 30px;
+    min-height: calc(100vh - 80px); 
+}
+
+.content-card {
+    background-color: var(--color-bg-card);
+    border-radius: 15px;
+    padding: 25px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: var(--color-text-primary);
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE: Força o branco em elementos internos no content-card */
+body.dark-mode .content-card *,
+body.dark-mode .content-card {
+    color: var(--color-text-primary);
+}
+body.dark-mode .content-card a {
+    color: var(--color-text-primary);
+}
+body.dark-mode .content-card a:hover {
+    color: var(--color-highlight);
+}
+body.dark-mode .content-card h2,
+body.dark-mode .content-card h3,
+body.dark-mode .content-card h4,
+body.dark-mode .content-card .list-item small,
+body.dark-mode .content-card .timestamp {
+    color: var(--color-text-secondary);
+}
+body.dark-mode .content-card h2 {
+    color: var(--color-highlight);
+}
+
+/* --- BANNER DE DESTAQUE DA DASHBOARD --- */
+.banner-destaque {
+    background-color: var(--color-bg-primary-dark);
+    color: var(--color-text-light);
+    padding: 30px 0;
+}
+.banner-destaque a { /* Garante link visível no banner */
+    color: var(--color-text-light); 
+}
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* CORREÇÃO FINAL DA DASHBOARD FORÇADA: Garante que o texto nos cards seja branco */
+body.dark-mode .recursos-grid .card,
+body.dark-mode .recursos-grid .card *,
+body.dark-mode .recursos-grid .card i {
+    color: var(--color-text-light) !important; 
+}
+.card {
+    background-color: var(--color-bg-primary-dark);
+    color: var(--color-text-light); 
+    height: 200px; 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.info-saeb h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+.btn-estudo {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- PÁGINAS DE AUTENTICAÇÃO (LOGIN/CADASTRO) --- */
+.auth-body {
+    background-color: var(--color-auth-bg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-form-card {
+    background-color: var(--color-bg-primary-dark);
+    color: var(--color-text-light); /* Texto do card deve ser CLARO */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Força todo o texto dentro do form de autenticação a ser branco no dark mode */
+body.dark-mode .auth-form-card *,
+body.dark-mode .auth-form-card {
+    color: var(--color-text-primary);
+}
+
+.auth-form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-bg-card); /* Fundo branco/claro */
+    color: var(--color-text-primary); /* Texto do input: claro no dark mode, escuro no light mode */
+}
+body.dark-mode .auth-form-card input {
+    background-color: var(--color-bg-card-darker);
+}
+body.dark-mode .auth-form-card input::placeholder {
+    color: var(--color-text-secondary); /* Placeholder deve ser visível (um cinza claro) */
+}
+
+
+.btn-auth {
+    background-color: var(--color-button-primary); 
+    color: var(--color-text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* --- LAYOUT DA LANDING PAGE (PONTO DE ENTRADA) --- */
+.landing-body {
+    background-color: var(--color-bg-page);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-header {
+    background-color: var(--color-bg-navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.landing-auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-landing {
+    background-color: var(--color-highlight);
+    color: var(--color-text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--color-highlight);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
+
+/* --- BOTÕES DE MATÉRIA (Aulas Extras/Nivelamento) --- */
+.materia-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+/* Garante que o texto nos botões de matéria seja claro */
+.materia-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-bg-card-darker);
+    color: var(--color-text-primary); 
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.materia-btn i {
+    color: var(--color-highlight);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* --- PERFIL DO USUÁRIO --- */
+.profile-container {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-info-section {
+    flex: 1; 
+    min-width: 280px;
+    border-right: 1px solid var(--color-bg-card-darker);
+    padding-right: 30px;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--color-bg-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.profile-avatar i {
+    color: var(--color-text-light);
+    font-size: 60px;
+}
+
+.profile-details h3 {
+    margin-bottom: 5px;
+    color: var(--color-highlight);
+}
+
+.profile-details a { /* Garante que o link de editar perfil fique claro */
+    color: var(--color-highlight) !important; 
+}
+
+
+.profile-content-section {
+    flex: 2; 
+}
+
+.profile-list-group {
+    margin-bottom: 25px;
+    background-color: var(--color-bg-card-darker);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid var(--color-bg-primary-dark);
+    color: var(--color-text-primary); /* Garante que o texto do grupo de lista seja claro */
+}
+
+.profile-list-group h4 {
+    border-bottom: 1px solid var(--color-bg-primary-dark);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--color-text-primary);
+}
+
+.list-item {
+    background-color: var(--color-bg-primary-dark);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item small {
+    display: block;
+    color: var(--color-text-secondary);
+}
+
+.btn-show-more {
+    background-color: var(--color-highlight); 
+    color: var(--color-text-light);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* --- CAIXA DE ENTRADA --- */
+.inbox-container {
+    padding: 0;
+    overflow: hidden; 
+}
+
+.inbox-search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--color-bg-card); 
+    border-bottom: 1px solid var(--color-bg-card-darker);
+}
+
+.inbox-layout {
+    display: flex;
+    min-height: 500px;
+}
+
+.inbox-sidebar {
+    flex: 0 0 250px; 
+    background-color: var(--color-bg-card-darker);
+    border-right: 1px solid var(--color-bg-card-darker);
+    padding: 20px 0;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.sidebar-item.active {
+    background-color: var(--color-bg-card);
+    border-right: 3px solid var(--color-highlight);
+    color: var(--color-highlight);
+}
+
+.inbox-list {
+    flex: 1;
+    background-color: var(--color-bg-card);
+    overflow-y: auto;
+}
+
+.inbox-message {
+    display: flex;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--color-bg-card-darker);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.inbox-message:hover {
+    background-color: var(--color-bg-card-darker);
+}
+
+.inbox-message.new-message {
+    font-weight: bold;
+    background-color: var(--color-bg-card-darker); 
+}
+
+.message-content {
+    flex-grow: 1;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    min-width: 60px;
+    text-align: right;
+}
+
+/* TABELA DE DADOS */
+.list-container-wrapper {
+    background-color: var(--color-bg-primary-dark);
+    border-radius: 15px;
+    padding: 25px 30px;
+    max-width: 1200px;
+    margin: 25px auto 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: var(--color-text-light);
+}
+.list-container-wrapper p { /* Garante que parágrafos internos fiquem claros */
+    color: var(--color-text-light);
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+}
+
+.data-table th {
+    text-align: left;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: var(--color-highlight); 
+}
+
+.data-table td {
+    background-color: var(--color-bg-table-row);
+    padding: 15px;
+    border: none;
+    vertical-align: middle;
+    border-radius: 8px;
+    /* Garante que o texto nas células da tabela seja claro */
+    color: var(--color-text-light);
+}
+.data-table td a { /* Garante que links em tabelas também sejam claros */
+    color: var(--color-text-light);
+}

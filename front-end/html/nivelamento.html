@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico e Nivelamento</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">N</div> 
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="simulados.html">Simulados</a></li>
+                <li><a href="aulas-extras.html">Aulas Extras</a></li> 
+                <li><a href="assistencia.html">Assistência Online</a></li> 
+                <li><a href="favoritos.html">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="caixa-de-entrada.html"><i class="fas fa-bell"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a> 
+            <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+            <a href="../../index.html" title="Sair"><i class="fas fa-sign-out-alt"></i></a> 
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="content-card">
+            <h2>Seu Caminho de Estudo Personalizado</h2>
+            <p style="margin-bottom: 25px;">Com base nos seus simulados e testes, veja as áreas que precisam de reforço imediato e o plano de estudo sugerido.</p>
+            
+            <div style="background-color: var(--color-bg-card-darker); padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+                <h3 style="color: var(--color-button-primary); margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> Áreas Críticas (Foco Principal)</h3>
+                <ul>
+                    <li style="margin-left: 20px; color: var(--color-text-secondary);">Matemática: Geometria Espacial (D14, D15)</li>
+                    <li style="margin-left: 20px; color: var(--color-text-secondary);">Português: Coerência e Coesão (D4, D5)</li>
+                </ul>
+                <a href="simulados.html" class="btn-estudo" style="margin-top: 20px;">Iniciar Teste de Nivelamento</a>
+            </div>
+
+            <h3 style="margin-top: 40px; border-bottom: 1px solid var(--color-text-secondary); padding-bottom: 10px;">Ações Recomendadas</h3>
+            
+            <div class="list-container-wrapper">
+                 <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recomendação</th>
+                                <th>Matéria</th>
+                                <th>Progresso</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Revisão de Volume e Capacidade</td>
+                                <td>Matemática</td>
+                                <td>0%</td>
+                                <td><button class="btn-show-more">Ver Material</button></td>
+                            </tr>
+                             <tr>
+                                <td>Exercícios de Gêneros Textuais</td>
+                                <td>Português</td>
+                                <td>50%</td>
+                                <td><button class="btn-show-more">Continuar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
